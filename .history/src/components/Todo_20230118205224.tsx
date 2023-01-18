@@ -10,7 +10,7 @@ interface TodoListProps {
   isActive: boolean;
   item: TodosItemProps;
   setTodos: Dispatch<SetStateAction<TodosItemProps[]>>;
-  tf: (id: string) => void;
+  tf: (x: TodosItemProps) => void;
 }
 function Todo({ item, isActive, setTodos }: TodoListProps) {
   const handleDeleteButtonClick = () => {

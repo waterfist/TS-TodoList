@@ -13,9 +13,7 @@ type TodosItemProps = {
 };
 function App() {
   const [todos, setTodos] = useState<TodosItemProps[]>(initialState);
-  const tf = (id: string) => {
-    setTodos((prev) => prev.filter((t) => t.id !== id));
-  };
+  const tf = () => {};
   return (
     <div>
       {/* <header>헤더입니다.</header> */}
@@ -29,8 +27,8 @@ function App() {
         {/* 인풋을 만들어 입력하는 부분 */}
         <Input setTodos={setTodos} />
         {/* todolist를 출력하는 부분 */}
-        <TodoList isActive={true} todos={todos} setTodos={setTodos} tf={tf} />
-        <TodoList isActive={false} todos={todos} setTodos={setTodos} tf={tf} />
+        <TodoList isActive={true} todos={todos} setTodos={setTodos} />
+        <TodoList isActive={false} todos={todos} setTodos={setTodos} />
       </main>
       <footer>푸터입니다.</footer>
     </div>

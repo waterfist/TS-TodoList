@@ -11,7 +11,7 @@ interface TodoListProps {
   isActive: boolean;
   todos: TodosItemProps[];
   setTodos: Dispatch<SetStateAction<TodosItemProps[]>>;
-  tf: (id: string) => void;
+  tf: (x: TodosItemProps) => void;
 }
 function TodoList({ todos, isActive, setTodos, tf }: TodoListProps) {
   return (
